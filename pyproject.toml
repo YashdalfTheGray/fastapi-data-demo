@@ -1,0 +1,30 @@
+[project]
+name = "fastapi-data-demo"
+version = "1.0.0"
+description = "Stuff"
+authors = [
+    {name = "Yash Kulshrestha",email = "yash.kulshrestha@gmail.com"}
+]
+license = {text = "GPL-3.0-or-later"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi (>=0.115.8,<0.116.0)",
+    "pydantic (>=2.10.6,<3.0.0)",
+    "uvicorn[standard] (>=0.34.0,<0.35.0)",
+    "gunicorn (>=23.0.0,<24.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
